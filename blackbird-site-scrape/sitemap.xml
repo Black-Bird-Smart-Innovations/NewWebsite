@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://blackbirdtech.app/</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blackbirdtech.app/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://blackbirdtech.app/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://blackbirdtech.app/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://blackbirdtech.app/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://blackbirdtech.app/?lang=ht"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://blackbirdtech.app/?lang=zh-hant"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://blackbirdtech.app/?lang=zh-hans"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://blackbirdtech.app/?lang=he"/>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://blackbirdtech.app/about-us/</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blackbirdtech.app/about-us/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://blackbirdtech.app/about-us/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://blackbirdtech.app/about-us/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://blackbirdtech.app/about-us/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://blackbirdtech.app/about-us/?lang=ht"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://blackbirdtech.app/about-us/?lang=zh-hant"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://blackbirdtech.app/about-us/?lang=zh-hans"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://blackbirdtech.app/about-us/?lang=he"/>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://blackbirdtech.app/privacy-policy/</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blackbirdtech.app/privacy-policy/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://blackbirdtech.app/privacy-policy/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://blackbirdtech.app/privacy-policy/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://blackbirdtech.app/privacy-policy/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://blackbirdtech.app/privacy-policy/?lang=ht"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://blackbirdtech.app/privacy-policy/?lang=zh-hant"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://blackbirdtech.app/privacy-policy/?lang=zh-hans"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://blackbirdtech.app/privacy-policy/?lang=he"/>
+  </url>
+
+  <!-- Terms & Conditions -->
+  <url>
+    <loc>https://blackbirdtech.app/terms-conditions/</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://blackbirdtech.app/terms-conditions/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://blackbirdtech.app/terms-conditions/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://blackbirdtech.app/terms-conditions/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://blackbirdtech.app/terms-conditions/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="ht" href="https://blackbirdtech.app/terms-conditions/?lang=ht"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://blackbirdtech.app/terms-conditions/?lang=zh-hant"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://blackbirdtech.app/terms-conditions/?lang=zh-hans"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://blackbirdtech.app/terms-conditions/?lang=he"/>
+  </url>
+
+  <!-- Cart -->
+  <url>
+    <loc>https://blackbirdtech.app/cart/</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
