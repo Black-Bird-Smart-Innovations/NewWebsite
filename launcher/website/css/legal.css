@@ -1,0 +1,213 @@
+/* ============================================
+   BLACK BIRD - Legal Pages Styles
+   ============================================ */
+
+.legal-page {
+    padding-top: calc(var(--nav-height) + var(--space-2xl));
+    padding-bottom: var(--space-4xl);
+    min-height: 100vh;
+}
+
+.legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+/* === Header === */
+.legal-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    padding-bottom: var(--space-2xl);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.legal-title {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.legal-meta {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+/* === Content === */
+.legal-content {
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+}
+
+.legal-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.legal-section h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-lg);
+    padding-top: var(--space-lg);
+}
+
+.legal-section h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+}
+
+.legal-section p {
+    margin-bottom: var(--space-md);
+}
+
+.legal-intro {
+    font-size: var(--text-lg);
+    color: var(--color-text-primary);
+    line-height: 1.7;
+}
+
+/* Lists */
+.legal-section ul,
+.legal-section ol {
+    margin-bottom: var(--space-lg);
+    padding-left: var(--space-xl);
+}
+
+.legal-section li {
+    margin-bottom: var(--space-sm);
+    position: relative;
+}
+
+.legal-section ul li::marker {
+    color: var(--color-primary);
+}
+
+.legal-section ol li::marker {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Links */
+.legal-section a {
+    color: var(--color-primary);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.legal-section a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* Contact Card */
+.contact-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin: var(--space-lg) 0;
+}
+
+.contact-card p {
+    margin-bottom: var(--space-xs);
+}
+
+.contact-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Notice Box */
+.legal-notice {
+    display: flex;
+    gap: var(--space-md);
+    background: rgba(236, 28, 36, 0.05);
+    border: 1px solid rgba(236, 28, 36, 0.2);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    margin: var(--space-xl) 0;
+}
+
+.legal-notice svg {
+    flex-shrink: 0;
+    color: var(--color-primary);
+    margin-top: 2px;
+}
+
+.legal-notice p {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+}
+
+/* === Footer for Legal Pages === */
+.legal-page + .footer {
+    background: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg) 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+}
+
+.footer-bottom p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.footer-legal-links a {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.footer-legal-links a:hover {
+    color: var(--color-primary);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .legal-page {
+        padding-top: calc(var(--nav-height) + var(--space-xl));
+    }
+
+    .legal-title {
+        font-size: var(--text-3xl);
+    }
+
+    .legal-section h2 {
+        font-size: var(--text-lg);
+    }
+
+    .legal-section h3 {
+        font-size: var(--text-base);
+    }
+
+    .legal-notice {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+}
