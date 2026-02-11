@@ -62,7 +62,7 @@
 .auth-logo .logo-icon {
     width: 40px;
     height: 40px;
-    color: var(--color-primary);
+    object-fit: contain;
 }
 
 .branding-content {

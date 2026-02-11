@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Bird | Protective Safety Wristband</title>
+    <meta name="color-scheme" content="light dark">
+    <script>
+        (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t})()
+    </script>
+    <title>Black Bird Smart Innovations | Protective Safety Wristband</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
@@ -21,14 +25,8 @@
     <nav class="nav" id="nav">
         <div class="nav-container">
             <a href="/" class="nav-logo">
-                <svg class="logo-icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Stylized Bird -->
-                    <path d="M15 8 L15 18 Q15 28 25 35 L35 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <path d="M15 18 Q8 22 5 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-                    <path d="M15 8 Q22 12 28 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-                    <circle cx="20" cy="14" r="2" fill="currentColor"/>
-                </svg>
-                <span>Black Bird<sup>TM</sup></span>
+                <img class="logo-icon" src="images/main-logo.png" alt="Black Bird Logo">
+                <span>lack Bird Smart Innovations<sup>TM</sup></span>
             </a>
 
             <div class="nav-links">
@@ -46,6 +44,10 @@
                         <path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
                 <a href="login.html" class="nav-link login-link">Log In</a>
                 <a href="#pricing" class="btn btn-primary">Get Started</a>
             </div>
@@ -93,7 +95,7 @@
                     <span class="gradient-text">your loved ones</span>
                 </h1>
                 <p class="hero-description">
-                    Black Bird is a protective smart wristband designed for vulnerable individuals.
+                    Black Bird Smart Innovations is a protective smart wristband designed for vulnerable individuals.
                     GPS tracking, emergency SOS, fall detection, and health monitoring —
                     all connected to the people who care most.
                 </p>
@@ -221,39 +223,27 @@
         </div>
     </section>
 
-    <!-- Video Section - Introduction -->
+    <!-- Video Section -->
     <section class="video-section" id="video">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">See It In Action</span>
-                <h2 class="section-title">Introducing Black Bird</h2>
+                <h2 class="section-title">Introducing Black Bird Smart Innovations</h2>
                 <p class="section-description">
                     Discover how our smart wristband technology provides peace of mind for caregivers and safety for loved ones.
                 </p>
             </div>
             <div class="video-wrapper">
-                <div class="video-container">
-                    <iframe
-                        src="https://player.vimeo.com/video/790678886?h=0&title=0&byline=0&portrait=0"
-                        frameborder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
+                <div class="video-container video-container--local">
+                    <video controls playsinline>
+                        <source src="videos/blackbird_smart_wristband_|_promo_2025 2.mov" type="video/quicktime">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Video Section - Tutorial -->
-    <section class="video-section video-tutorial" id="tutorial">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">How To Use</span>
-                <h2 class="section-title">Getting started is simple</h2>
-                <p class="section-description">
-                    Watch our quick guide to learn how easy it is to set up and use your Black Bird wristband.
-                </p>
-            </div>
+            <h3 class="video-subsection-title" id="tutorial">Quick Setup Guide</h3>
+            <p class="video-subsection-desc">Watch our quick guide to learn how easy it is to set up and use your Black Bird wristband.</p>
             <div class="video-wrapper">
                 <div class="video-container">
                     <iframe
@@ -308,37 +298,6 @@
 
                 <div class="feature-card">
                     <div class="feature-icon-wrapper">
-                        <div class="feature-icon sos">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                <path d="M16 4V8M16 24V28M4 16H8M24 16H28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                                <circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="feature-title">One-Touch SOS</h3>
-                    <p class="feature-description">
-                        A single button press connects to emergency services and alerts all designated contacts instantly.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
-                        <div class="feature-icon fall">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                <circle cx="16" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
-                                <path d="M12 16L8 28M20 16L24 28M16 14V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M10 20L22 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="feature-title">Fall Detection</h3>
-                    <p class="feature-description">
-                        Advanced sensors detect falls automatically and alert caregivers within seconds.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon-wrapper">
                         <div class="feature-icon health">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
                                 <path d="M28 12H22L18 24L14 8L10 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -386,6 +345,459 @@
         </div>
     </section>
 
+    <!-- Emergency Response & Fall Detection Section -->
+    <section class="emergency-section" id="emergency">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Critical Safety</span>
+                <h2 class="section-title">When every second counts</h2>
+                <p class="section-description">
+                    Our life-saving SOS system and intelligent fall detection work together to get help fast —
+                    delivering critical information directly to first responders.
+                </p>
+            </div>
+
+            <!-- First Responder Codes Hero Banner -->
+            <div class="frc-hero">
+                <div class="frc-hero-bg">
+                    <div class="frc-grid-lines"></div>
+                </div>
+                <div class="frc-hero-content">
+                    <div class="frc-hero-text">
+                        <div class="frc-badge-row">
+                            <div class="frc-live-badge">
+                                <span class="frc-live-dot"></span>
+                                <span>LIVE NETWORK</span>
+                            </div>
+                        </div>
+                        <h3 class="frc-hero-title">First Responder<br><span class="gradient-text">Code System</span></h3>
+                        <p class="frc-hero-desc">
+                            When SOS is triggered, Black Bird instantly transmits a complete digital profile
+                            to the nearest fire department, police precinct, and EMS dispatch center —
+                            giving first responders the critical information they need before they even arrive on scene.
+                        </p>
+                        <div class="frc-hero-stats">
+                            <div class="frc-stat">
+                                <span class="frc-stat-value">500+</span>
+                                <span class="frc-stat-label">Municipal agencies connected</span>
+                            </div>
+                            <div class="frc-stat">
+                                <span class="frc-stat-value">&lt;3s</span>
+                                <span class="frc-stat-label">Profile delivery time</span>
+                            </div>
+                            <div class="frc-stat">
+                                <span class="frc-stat-value">50</span>
+                                <span class="frc-stat-label">States covered</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="frc-hero-visual">
+                        <!-- SOS Button with Rings -->
+                        <div class="sos-visual-large">
+                            <div class="sos-ring sos-ring-1"></div>
+                            <div class="sos-ring sos-ring-2"></div>
+                            <div class="sos-ring sos-ring-3"></div>
+                            <div class="sos-ring sos-ring-4"></div>
+                            <div class="sos-btn-core">
+                                <span class="sos-btn-text">SOS</span>
+                                <span class="sos-btn-sub">PRESS &amp; HOLD</span>
+                            </div>
+                        </div>
+                        <!-- Connection Lines to Services -->
+                        <div class="sos-service-node node-police">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 7V18H17V7L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 18V12H12V18" stroke="currentColor" stroke-width="1.5"/><circle cx="10" cy="9" r="1.5" fill="currentColor"/></svg>
+                            <span>Police</span>
+                        </div>
+                        <div class="sos-service-node node-fire">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2C10 2 4 8 4 12C4 15.3 6.7 18 10 18C13.3 18 16 15.3 16 12C16 8 10 2 10 2Z" stroke="currentColor" stroke-width="1.5"/><path d="M10 18C10 18 8 16 8 14C8 12 10 10 10 10C10 10 12 12 12 14C12 16 10 18 10 18Z" fill="currentColor" opacity="0.3"/></svg>
+                            <span>Fire Dept</span>
+                        </div>
+                        <div class="sos-service-node node-ems">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="6" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 6V4C7 3.44772 7.44772 3 8 3H12C12.5523 3 13 3.44772 13 4V6" stroke="currentColor" stroke-width="1.5"/><path d="M10 9V13M8 11H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                            <span>EMS</span>
+                        </div>
+                        <div class="sos-service-node node-dispatch">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M3 10H5M15 10H17M10 3V5M10 15V17" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                            <span>911 Dispatch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Responder Profile Data Cards -->
+            <div class="frc-profile-section">
+                <div class="frc-profile-header">
+                    <h4 class="frc-profile-title">What first responders receive instantly</h4>
+                    <p class="frc-profile-subtitle">A complete digital care profile is transmitted in under 3 seconds</p>
+                </div>
+                <div class="frc-profile-grid">
+                    <div class="frc-profile-card">
+                        <div class="frc-card-icon frc-icon-medical">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <path d="M14 4V8M14 20V24M4 14H8M20 14H24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <rect x="8" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h5 class="frc-card-title">Medical Conditions</h5>
+                        <p class="frc-card-desc">Allergies, current medications, blood type, chronic conditions, surgical history</p>
+                        <div class="frc-card-tags">
+                            <span class="frc-tag">Allergies</span>
+                            <span class="frc-tag">Blood Type</span>
+                            <span class="frc-tag">Medications</span>
+                        </div>
+                    </div>
+                    <div class="frc-profile-card">
+                        <div class="frc-card-icon frc-icon-gps">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <circle cx="14" cy="14" r="10" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="14" cy="14" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 2V6M14 22V26M2 14H6M22 14H26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h5 class="frc-card-title">Live GPS Coordinates</h5>
+                        <p class="frc-card-desc">Real-time position, street address, nearest landmark, indoor/outdoor status</p>
+                        <div class="frc-card-tags">
+                            <span class="frc-tag">Lat/Long</span>
+                            <span class="frc-tag">Address</span>
+                            <span class="frc-tag">Real-time</span>
+                        </div>
+                    </div>
+                    <div class="frc-profile-card">
+                        <div class="frc-card-icon frc-icon-contacts">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <circle cx="14" cy="9" r="5" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 24C5 19.5817 8.58172 16 13 16H15C19.4183 16 23 19.5817 23 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h5 class="frc-card-title">Emergency Contacts</h5>
+                        <p class="frc-card-desc">Family members, primary caregivers, treating physicians, legal guardians</p>
+                        <div class="frc-card-tags">
+                            <span class="frc-tag">Family</span>
+                            <span class="frc-tag">Caregivers</span>
+                            <span class="frc-tag">Physicians</span>
+                        </div>
+                    </div>
+                    <div class="frc-profile-card">
+                        <div class="frc-card-icon frc-icon-care">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <rect x="4" y="3" width="20" height="22" rx="3" stroke="currentColor" stroke-width="2"/>
+                                <path d="M9 8H19M9 12H19M9 16H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h5 class="frc-card-title">Care Instructions</h5>
+                        <p class="frc-card-desc">Special needs, cognitive status, preferred language, behavioral considerations</p>
+                        <div class="frc-card-tags">
+                            <span class="frc-tag">Special Needs</span>
+                            <span class="frc-tag">Language</span>
+                            <span class="frc-tag">Care Notes</span>
+                        </div>
+                    </div>
+                    <div class="frc-profile-card">
+                        <div class="frc-card-icon frc-icon-id">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <rect x="3" y="6" width="22" height="16" rx="3" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="10" cy="13" r="3" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M16 11H22M16 15H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h5 class="frc-card-title">Photo ID &amp; Description</h5>
+                        <p class="frc-card-desc">Recent photo, physical description, what they're wearing, identifying features</p>
+                        <div class="frc-card-tags">
+                            <span class="frc-tag">Photo</span>
+                            <span class="frc-tag">Description</span>
+                            <span class="frc-tag">Attire</span>
+                        </div>
+                    </div>
+                    <div class="frc-profile-card">
+                        <div class="frc-card-icon frc-icon-device">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <rect x="6" y="4" width="16" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 8H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="14" cy="19" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h5 class="frc-card-title">Device &amp; Vitals</h5>
+                        <p class="frc-card-desc">Battery status, last known temperature, fall detection data, movement history</p>
+                        <div class="frc-card-tags">
+                            <span class="frc-tag">Temperature</span>
+                            <span class="frc-tag">Battery</span>
+                            <span class="frc-tag">Vitals</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Municipal Coverage Map -->
+            <div class="frc-map-section">
+                <div class="frc-map-header">
+                    <h4 class="frc-map-title">Connected across every county</h4>
+                    <p class="frc-map-subtitle">
+                        Black Bird Smart Innovations integrates with municipal emergency networks nationwide.
+                        Fire departments, police precincts, EMS stations, and 911 dispatch centers —
+                        all connected to receive your First Responder Profile the moment you need help.
+                    </p>
+                    <div class="frc-map-legend">
+                        <div class="legend-item">
+                            <span class="legend-dot legend-police"></span>
+                            <span>Police Precinct</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot legend-fire"></span>
+                            <span>Fire Department</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot legend-ems"></span>
+                            <span>EMS / Hospital</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot legend-dispatch"></span>
+                            <span>911 Dispatch Center</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frc-map-container">
+                    <div class="frc-map-grid"></div>
+                    <!-- County regions -->
+                    <div class="county-region county-1"><span>Rockland<br>County</span></div>
+                    <div class="county-region county-2"><span>Westchester<br>County</span></div>
+                    <div class="county-region county-3"><span>Orange<br>County</span></div>
+                    <div class="county-region county-4"><span>Bergen<br>County, NJ</span></div>
+                    <div class="county-region county-5"><span>Bronx<br>County</span></div>
+
+                    <!-- Municipal pins -->
+                    <div class="map-pin pin-police" style="top:22%;left:28%" data-label="Nanuet PD">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 7V18H17V7L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="10" cy="10" r="2" fill="currentColor"/></svg></div>
+                        <div class="pin-tooltip">Nanuet Police Dept<span>Rockland County</span></div>
+                    </div>
+                    <div class="map-pin pin-fire" style="top:35%;left:20%" data-label="Nanuet FD">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2C10 2 4 8 4 12C4 15.3 6.7 18 10 18C13.3 18 16 15.3 16 12C16 8 10 2 10 2Z" stroke="currentColor" stroke-width="1.5"/></svg></div>
+                        <div class="pin-tooltip">Nanuet Fire Dept<span>Rockland County</span></div>
+                    </div>
+                    <div class="map-pin pin-ems" style="top:15%;left:38%" data-label="Nyack Hospital">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><rect x="4" y="6" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M10 9V13M8 11H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                        <div class="pin-tooltip">Nyack Hospital EMS<span>Rockland County</span></div>
+                    </div>
+                    <div class="map-pin pin-dispatch" style="top:28%;left:45%" data-label="RC 911">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                        <div class="pin-tooltip">Rockland 911 Center<span>Dispatch Hub</span></div>
+                    </div>
+
+                    <div class="map-pin pin-police" style="top:20%;left:62%" data-label="White Plains PD">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 7V18H17V7L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="10" cy="10" r="2" fill="currentColor"/></svg></div>
+                        <div class="pin-tooltip">White Plains PD<span>Westchester County</span></div>
+                    </div>
+                    <div class="map-pin pin-fire" style="top:32%;left:72%" data-label="Yonkers FD">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2C10 2 4 8 4 12C4 15.3 6.7 18 10 18C13.3 18 16 15.3 16 12C16 8 10 2 10 2Z" stroke="currentColor" stroke-width="1.5"/></svg></div>
+                        <div class="pin-tooltip">Yonkers Fire Dept<span>Westchester County</span></div>
+                    </div>
+                    <div class="map-pin pin-ems" style="top:12%;left:55%" data-label="WC Med Ctr">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><rect x="4" y="6" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M10 9V13M8 11H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                        <div class="pin-tooltip">Westchester Medical Ctr<span>Westchester County</span></div>
+                    </div>
+
+                    <div class="map-pin pin-police" style="top:55%;left:15%" data-label="Newburgh PD">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 7V18H17V7L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="10" cy="10" r="2" fill="currentColor"/></svg></div>
+                        <div class="pin-tooltip">Newburgh Police Dept<span>Orange County</span></div>
+                    </div>
+                    <div class="map-pin pin-fire" style="top:65%;left:30%" data-label="Monroe FD">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2C10 2 4 8 4 12C4 15.3 6.7 18 10 18C13.3 18 16 15.3 16 12C16 8 10 2 10 2Z" stroke="currentColor" stroke-width="1.5"/></svg></div>
+                        <div class="pin-tooltip">Monroe Fire Dept<span>Orange County</span></div>
+                    </div>
+                    <div class="map-pin pin-dispatch" style="top:48%;left:25%" data-label="OC 911">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                        <div class="pin-tooltip">Orange County 911<span>Dispatch Hub</span></div>
+                    </div>
+
+                    <div class="map-pin pin-police" style="top:45%;left:50%" data-label="Hackensack PD">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 7V18H17V7L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="10" cy="10" r="2" fill="currentColor"/></svg></div>
+                        <div class="pin-tooltip">Hackensack PD<span>Bergen County, NJ</span></div>
+                    </div>
+                    <div class="map-pin pin-ems" style="top:58%;left:60%" data-label="Bergen EMS">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><rect x="4" y="6" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M10 9V13M8 11H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                        <div class="pin-tooltip">Bergen Regional EMS<span>Bergen County, NJ</span></div>
+                    </div>
+
+                    <div class="map-pin pin-fire" style="top:40%;left:82%" data-label="FDNY Stn 52">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2C10 2 4 8 4 12C4 15.3 6.7 18 10 18C13.3 18 16 15.3 16 12C16 8 10 2 10 2Z" stroke="currentColor" stroke-width="1.5"/></svg></div>
+                        <div class="pin-tooltip">FDNY Station 52<span>Bronx County</span></div>
+                    </div>
+                    <div class="map-pin pin-police" style="top:55%;left:88%" data-label="NYPD 47th">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M10 2L3 7V18H17V7L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="10" cy="10" r="2" fill="currentColor"/></svg></div>
+                        <div class="pin-tooltip">NYPD 47th Precinct<span>Bronx County</span></div>
+                    </div>
+                    <div class="map-pin pin-ems" style="top:68%;left:78%" data-label="Jacobi MC">
+                        <div class="pin-pulse"></div>
+                        <div class="pin-icon"><svg width="14" height="14" viewBox="0 0 20 20" fill="none"><rect x="4" y="6" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M10 9V13M8 11H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                        <div class="pin-tooltip">Jacobi Medical Center<span>Bronx County</span></div>
+                    </div>
+
+                    <!-- Active user pin -->
+                    <div class="map-pin pin-user" style="top:30%;left:30%">
+                        <div class="pin-user-pulse"></div>
+                        <div class="pin-user-dot"></div>
+                        <div class="pin-tooltip pin-tooltip-user">You are here<span>230 W Route 59, Nanuet</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fall Detection + SOS Grid -->
+            <div class="emergency-grid">
+                <!-- Fall Detection -->
+                <div class="emergency-card emergency-fall">
+                    <div class="emergency-card-header">
+                        <div class="emergency-icon-badge fall-badge">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <circle cx="16" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 16L8 28M20 16L24 28M16 14V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M10 20L22 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="emergency-label">Intelligent Fall Detection</span>
+                    </div>
+                    <h3 class="emergency-title">Falls detected.<br>Alerts sent automatically.</h3>
+                    <p class="emergency-description">
+                        Advanced accelerometer and gyroscope sensors detect sudden impacts and unusual movement patterns.
+                        When a fall is detected, the system automatically triggers an alert — no button press required.
+                    </p>
+
+                    <div class="fall-timeline">
+                        <h4 class="fall-timeline-title">What happens when a fall is detected</h4>
+                        <div class="timeline-steps">
+                            <div class="timeline-step">
+                                <div class="timeline-marker">
+                                    <div class="timeline-dot active"></div>
+                                    <div class="timeline-line"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span class="timeline-time">0 sec</span>
+                                    <span class="timeline-event">Impact detected by sensors</span>
+                                </div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="timeline-marker">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-line"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span class="timeline-time">5 sec</span>
+                                    <span class="timeline-event">Wristband vibrates — cancellation window</span>
+                                </div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="timeline-marker">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-line"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span class="timeline-time">30 sec</span>
+                                    <span class="timeline-event">Alert sent to all emergency contacts</span>
+                                </div>
+                            </div>
+                            <div class="timeline-step">
+                                <div class="timeline-marker">
+                                    <div class="timeline-dot"></div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span class="timeline-time">45 sec</span>
+                                    <span class="timeline-event">GPS location shared with first responders</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sensor-stats">
+                        <div class="sensor-stat">
+                            <span class="sensor-value">99.2%</span>
+                            <span class="sensor-label">Detection accuracy</span>
+                        </div>
+                        <div class="sensor-stat">
+                            <span class="sensor-value">&lt;5s</span>
+                            <span class="sensor-label">Response time</span>
+                        </div>
+                        <div class="sensor-stat">
+                            <span class="sensor-value">24/7</span>
+                            <span class="sensor-label">Always monitoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- One-Touch SOS -->
+                <div class="emergency-card emergency-sos">
+                    <div class="emergency-card-glow"></div>
+                    <div class="emergency-card-header">
+                        <div class="emergency-icon-badge sos-badge">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M16 4V8M16 24V28M4 16H8M24 16H28" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="2.5"/>
+                            </svg>
+                        </div>
+                        <span class="emergency-label">One-Touch SOS</span>
+                    </div>
+                    <h3 class="emergency-title">One press.<br>Help arrives.</h3>
+                    <p class="emergency-description">
+                        A single button press triggers a full emergency protocol — alerting your designated contacts,
+                        sharing your GPS location, and transmitting your First Responder Profile to 911 dispatchers.
+                    </p>
+
+                    <div class="sos-flow">
+                        <div class="sos-flow-step">
+                            <div class="sos-flow-num">1</div>
+                            <div class="sos-flow-content">
+                                <strong>SOS Activated</strong>
+                                <span>User presses the emergency button</span>
+                            </div>
+                        </div>
+                        <div class="sos-flow-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="sos-flow-step">
+                            <div class="sos-flow-num">2</div>
+                            <div class="sos-flow-content">
+                                <strong>Profile Transmitted</strong>
+                                <span>First Responder codes sent to dispatch</span>
+                            </div>
+                        </div>
+                        <div class="sos-flow-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="sos-flow-step">
+                            <div class="sos-flow-num">3</div>
+                            <div class="sos-flow-content">
+                                <strong>Contacts Alerted</strong>
+                                <span>SMS &amp; call sent to all emergency contacts</span>
+                            </div>
+                        </div>
+                        <div class="sos-flow-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="sos-flow-step">
+                            <div class="sos-flow-num">4</div>
+                            <div class="sos-flow-content">
+                                <strong>Help Dispatched</strong>
+                                <span>Nearest units receive location + profile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Products Section -->
     <section class="products-section" id="products">
         <div class="container">
@@ -393,7 +805,7 @@
                 <span class="section-tag">Our Products</span>
                 <h2 class="section-title">Choose the right protection for your needs</h2>
                 <p class="section-description">
-                    From smart wristbands to medical ID solutions, we have protection options for every situation.
+                    From smart wristbands and SOS buttons to pendants and smartphones — we have protection options for every situation.
                 </p>
             </div>
 
@@ -420,16 +832,19 @@
                 <div class="product-card featured">
                     <div class="product-badge">Most Popular</div>
                     <div class="product-image-wrapper">
-                        <img src="images/products/pendant-v45.png" alt="Black Bird Pendant V45" class="product-image">
+                        <img src="images/Pendant.PNG" alt="Black Bird Pendant V45" class="product-image product-image-fill">
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">Black Bird "Pendant" Smart Wristband V45</h3>
+                        <h3 class="product-name">LTE Smart Blackbird Pendant (Bold)</h3>
                         <p class="product-subtitle">LTE/Nano SIM</p>
                         <div class="product-features">
                             <span class="product-feature">LTE Cellular</span>
                             <span class="product-feature">GPS Tracking</span>
                             <span class="product-feature">Health Monitor</span>
+                            <span class="product-feature">SOS Button</span>
+                            <span class="product-feature">Touchscreen</span>
                         </div>
+                        <p class="product-compat">Compatible with <strong>SpeedTalk</strong> (T-Mobile Network)</p>
                         <div class="product-price">
                             <span class="price-amount">Get a quote</span>
                         </div>
@@ -458,10 +873,50 @@
 
                 <div class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="images/plush-gigapixel-standard v2-2x.jpeg" alt="Black Bird Plush" class="product-image">
+                        <img src="images/Button.PNG" alt="Black Bird SOS Button" class="product-image">
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">Black Bird Plush</h3>
+                        <h3 class="product-name">Black Bird SOS Button</h3>
+                        <p class="product-subtitle">One-Touch Emergency</p>
+                        <div class="product-features">
+                            <span class="product-feature">SOS Alert</span>
+                            <span class="product-feature">Discreet Design</span>
+                            <span class="product-feature">Clip-On</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-amount">Get a quote</span>
+                        </div>
+                        <a href="#pricing" class="btn btn-primary product-btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="product-card featured">
+                    <div class="product-badge">New</div>
+                    <div class="product-image-wrapper">
+                        <img src="images/Phone.PNG" alt="Black Bird Blaze" class="product-image product-image-fill">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Black Bird Blaze</h3>
+                        <p class="product-subtitle">5G / Black Bird OS</p>
+                        <div class="product-features">
+                            <span class="product-feature">5G Connectivity</span>
+                            <span class="product-feature">Built-in SOS</span>
+                            <span class="product-feature">GPS Tracking</span>
+                            <span class="product-feature">BB App Suite</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-amount">Coming Soon</span>
+                        </div>
+                        <a href="#pricing" class="btn btn-primary product-btn">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/plush-gigapixel-standard v2-2x.jpeg" alt="Black Bird Buddy" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Black Bird Buddy</h3>
                         <p class="product-subtitle">Comfort Companion</p>
                         <div class="product-features">
                             <span class="product-feature">Soft & Cuddly</span>
@@ -469,7 +924,7 @@
                             <span class="product-feature">Collectible</span>
                         </div>
                         <div class="product-price">
-                            <span class="price-amount">Get a quote</span>
+                            <span class="price-amount">$29.99</span>
                         </div>
                         <a href="#pricing" class="btn btn-primary product-btn">Learn More</a>
                     </div>
@@ -650,7 +1105,7 @@
                     </div>
                 </div>
 
-                <a href="#" class="btn btn-primary btn-large pricing-cta">
+                <a href="#pricing" class="btn btn-primary btn-large pricing-cta">
                     <span>Start Your Protection</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -668,76 +1123,13 @@
         </div>
     </section>
 
-    <!-- App Download Section -->
-    <section class="download-section">
-        <div class="container">
-            <div class="download-content">
-                <div class="download-text">
-                    <span class="section-tag">Mobile App</span>
-                    <h2 class="section-title">Stay connected from anywhere</h2>
-                    <p class="download-description">
-                        Monitor your loved one's location, receive instant alerts, and manage settings —
-                        all from our beautifully designed mobile app. Available for iOS and Android.
-                    </p>
-                    <div class="app-buttons">
-                        <a href="#" class="app-store-btn">
-                            <svg viewBox="0 0 24 24" fill="currentColor" class="store-icon">
-                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                            </svg>
-                            <div class="store-text">
-                                <span class="store-subtitle">Download on the</span>
-                                <span class="store-title">App Store</span>
-                            </div>
-                        </a>
-                        <a href="#" class="app-store-btn">
-                            <svg viewBox="0 0 24 24" fill="currentColor" class="store-icon">
-                                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-                            </svg>
-                            <div class="store-text">
-                                <span class="store-subtitle">Get it on</span>
-                                <span class="store-title">Google Play</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="download-visual">
-                    <div class="phone-mockup">
-                        <div class="phone-screen">
-                            <div class="app-preview">
-                                <div class="app-header">
-                                    <span class="app-greeting">Good morning</span>
-                                    <span class="app-name">Mom is safe</span>
-                                </div>
-                                <div class="app-map-preview"></div>
-                                <div class="app-status-cards">
-                                    <div class="status-card">
-                                        <span class="status-icon">📍</span>
-                                        <span class="status-text">Home</span>
-                                    </div>
-                                    <div class="status-card">
-                                        <span class="status-icon">💚</span>
-                                        <span class="status-text">Active</span>
-                                    </div>
-                                    <div class="status-card">
-                                        <span class="status-icon">🌡</span>
-                                        <span class="status-text">98.6°F</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Ready to protect your loved ones?</h2>
                 <p class="cta-description">
-                    Join thousands of families who trust Black Bird for peace of mind.
+                    Join thousands of families who trust Black Bird Smart Innovations for peace of mind.
                 </p>
                 <div class="cta-buttons">
                     <a href="#pricing" class="btn btn-primary btn-large">Get Started Today</a>
@@ -746,6 +1138,26 @@
                             <path d="M3 4.5C3 3.67157 3.67157 3 4.5 3H7.37163C7.73999 3 8.06662 3.23053 8.18994 3.57655L9.28324 6.85607C9.42225 7.24584 9.26178 7.68036 8.89897 7.8842L7.17899 8.85034C8.08984 10.8541 9.64593 12.4102 11.6497 13.321L12.6158 11.601C12.8196 11.2382 13.2542 11.0778 13.6439 11.2168L16.9234 12.3101C17.2695 12.4334 17.5 12.76 17.5 13.1284V16C17.5 16.8284 16.8284 17.5 16 17.5H15C8.37258 17.5 3 12.1274 3 5.5V4.5Z" stroke="currentColor" stroke-width="1.5"/>
                         </svg>
                         <span>Call Us: 917-977-0949</span>
+                    </a>
+                </div>
+                <div class="cta-app-buttons">
+                    <a href="#" class="app-store-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="store-icon">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        <div class="store-text">
+                            <span class="store-subtitle">Download on the</span>
+                            <span class="store-title">App Store</span>
+                        </div>
+                    </a>
+                    <a href="#" class="app-store-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="store-icon">
+                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                        </svg>
+                        <div class="store-text">
+                            <span class="store-subtitle">Get it on</span>
+                            <span class="store-title">Google Play</span>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -764,7 +1176,7 @@
                             <path d="M15 8 Q22 12 28 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
                             <circle cx="20" cy="14" r="2" fill="currentColor"/>
                         </svg>
-                        <span>Black Bird<sup>TM</sup></span>
+                        <span>Black Bird Smart Innovations<sup>TM</sup></span>
                     </a>
                     <p class="footer-tagline">
                         Protective technology for vulnerable individuals.
@@ -813,7 +1225,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2024 Black Bird. All rights reserved.</p>
+                <p class="copyright">&copy; 2024 Black Bird Smart Innovations. All rights reserved.</p>
                 <div class="footer-social">
                     <a href="#" class="social-link" aria-label="Facebook">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -844,5 +1256,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>

@@ -428,3 +428,8 @@
         font-size: var(--text-xl);
     }
 }
+
+/* === Dark Mode === */
+[data-theme="dark"] .about-hero {
+    background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+}
