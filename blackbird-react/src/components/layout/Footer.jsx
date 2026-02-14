@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="footer-brand">
             <Link to="/" className="footer-logo">
               <img className="logo-icon" src="/images/main-logo.png" alt="Black Bird Logo" />
-              <span>Black Bird Smart Innovations<sup>TM</sup></span>
+              <span>lack Bird Smart Innovations<sup>TM</sup></span>
             </Link>
             <p className="footer-tagline">
               Protective technology for vulnerable individuals.

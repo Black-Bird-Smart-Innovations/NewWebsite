@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <script>
-        (function(){var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t})()
+        (function(){var t=localStorage.getItem('bb-theme')||'light';var d=document.documentElement;d.setAttribute('data-theme',t);d.className=t;d.style.colorScheme=t})()
     </script>
     <title>Black Bird Smart Innovations | Protective Safety Wristband</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
