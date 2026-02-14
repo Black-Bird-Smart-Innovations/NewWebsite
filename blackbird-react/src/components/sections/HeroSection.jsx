@@ -8,7 +8,7 @@ export default function HeroSection() {
             <span>24/7 Protection &amp; Peace of Mind</span>
           </div>
           <h1 className="hero-title">
-            Safety that watches over
+            Safety that watches over{' '}
             <span className="gradient-text">your loved ones</span>
           </h1>
           <p className="hero-description">
