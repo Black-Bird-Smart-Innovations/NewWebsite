@@ -94,7 +94,7 @@ export default function LoginPage() {
               </div>
             </div>
           </div>
-          <div className="branding-footer"><p>&copy; 2025 Black Bird Smart Innovations. All rights reserved.</p></div>
+          <div className="branding-footer"><p>&copy; {new Date().getFullYear()} Black Bird Smart Innovations. All rights reserved.</p></div>
         </div>
 
         <div className="auth-form-wrapper">
