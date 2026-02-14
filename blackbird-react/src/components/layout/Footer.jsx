@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p className="copyright">&copy; 2024 Black Bird Smart Innovations. All rights reserved.</p>
+          <p className="copyright">&copy; 2025 Black Bird Smart Innovations. All rights reserved.</p>
           <div className="footer-social">
             <a href="#" className="social-link" aria-label="Facebook">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">

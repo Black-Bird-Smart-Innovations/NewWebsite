@@ -90,7 +90,7 @@ export default function RegisterPage() {
               </div>
             </div>
           </div>
-          <div className="branding-footer"><p>&copy; 2024 Black Bird Smart Innovations. All rights reserved.</p></div>
+          <div className="branding-footer"><p>&copy; 2025 Black Bird Smart Innovations. All rights reserved.</p></div>
         </div>
 
         <div className="auth-form-wrapper">

@@ -43,7 +43,7 @@ export default function ForgotPasswordPage() {
             <h1 className="branding-title">Reset your password</h1>
             <p className="branding-description">Enter your email address and we'll send you a link to reset your password.</p>
           </div>
-          <div className="branding-footer"><p>&copy; 2024 Black Bird Smart Innovations. All rights reserved.</p></div>
+          <div className="branding-footer"><p>&copy; 2025 Black Bird Smart Innovations. All rights reserved.</p></div>
         </div>
 
         <div className="auth-form-wrapper">

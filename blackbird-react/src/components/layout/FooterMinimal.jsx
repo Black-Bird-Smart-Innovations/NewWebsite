@@ -5,7 +5,7 @@ export default function FooterMinimal() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-bottom">
-          <p>&copy; 2024 Black Bird Smart Innovations. All rights reserved.</p>
+          <p>&copy; 2025 Black Bird Smart Innovations. All rights reserved.</p>
           <div className="footer-legal-links">
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>
