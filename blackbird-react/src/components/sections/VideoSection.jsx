@@ -12,7 +12,7 @@ export default function VideoSection() {
         <div className="video-wrapper">
           <div className="video-container video-container--local">
             <video controls playsInline>
-              <source src="/videos/blackbird_smart_wristband_|_promo_2025 2.mov" type="video/quicktime" />
+              <source src="/videos/blackbird-promo-2025.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
