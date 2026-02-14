@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
-import { auth, googleProvider } from '../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth, signInWithGoogle } from '../firebase';
 import { useAuth } from '../context/AuthContext';
 import AmbientBackground from '../components/layout/AmbientBackground';
 import '../css/auth.css';
@@ -22,7 +22,11 @@ export default function LoginPage() {
       case 'auth/wrong-password': return 'Incorrect password.';
       case 'auth/too-many-requests': return 'Too many attempts. Please try again later.';
       case 'auth/invalid-email': return 'Please enter a valid email address.';
-      default: return 'An error occurred. Please try again.';
+      case 'auth/unauthorized-domain': return 'This domain is not authorized for sign-in. Check Firebase Auth settings.';
+      case 'auth/operation-not-allowed': return 'Google sign-in is not enabled. Enable it in Firebase Console.';
+      case 'auth/popup-blocked': return 'Popup was blocked by the browser. Please allow popups.';
+      case 'auth/popup-closed-by-user': return 'Sign-in popup was closed. Please try again.';
+      default: return `Error (${code}). Please try again.`;
     }
   };
 
@@ -45,10 +49,18 @@ export default function LoginPage() {
     setError('');
     setLoading(true);
     try {
-      const { user } = await signInWithPopup(auth, googleProvider);
-      await syncBackend(user);
-      navigate('/');
+      const result = await signInWithGoogle();
+      if (result?.user) {
+        try {
+          await syncBackend(result.user);
+        } catch (backendErr) {
+          console.error('Backend sync failed (non-blocking):', backendErr);
+        }
+        navigate('/');
+      }
+      // If null, redirect is happening — page will reload
     } catch (err) {
+      console.error('Google sign-in error:', err.code, err.message, err);
       setError(err.code ? getErrorMessage(err.code) : err.message);
     } finally {
       setLoading(false);

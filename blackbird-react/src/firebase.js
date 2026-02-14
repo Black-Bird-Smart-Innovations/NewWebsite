@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult } from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "YOUR_API_KEY",
@@ -13,4 +13,33 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
+
+// Google sign-in with popup → redirect fallback
+export async function signInWithGoogle() {
+  try {
+    return await signInWithPopup(auth, googleProvider);
+  } catch (err) {
+    // If popup blocked or failed, fall back to redirect
+    if (
+      err.code === 'auth/popup-blocked' ||
+      err.code === 'auth/popup-closed-by-user' ||
+      err.code === 'auth/cancelled-popup-request' ||
+      err.code === 'auth/internal-error'
+    ) {
+      await signInWithRedirect(auth, googleProvider);
+      return null; // page will reload after redirect
+    }
+    throw err;
+  }
+}
+
+// Check for redirect result on page load
+export async function checkRedirectResult() {
+  try {
+    return await getRedirectResult(auth);
+  } catch {
+    return null;
+  }
+}
+
 export default app;

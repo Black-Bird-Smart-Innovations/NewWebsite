@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword, updateProfile, signInWithPopup } from 'firebase/auth';
-import { auth, googleProvider } from '../firebase';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { auth, signInWithGoogle } from '../firebase';
 import { useAuth } from '../context/AuthContext';
 import AmbientBackground from '../components/layout/AmbientBackground';
 import '../css/auth.css';
@@ -45,10 +45,18 @@ export default function RegisterPage() {
     setError('');
     setLoading(true);
     try {
-      const { user } = await signInWithPopup(auth, googleProvider);
-      await syncBackend(user);
-      navigate('/');
+      const result = await signInWithGoogle();
+      if (result?.user) {
+        try {
+          await syncBackend(result.user);
+        } catch (backendErr) {
+          console.error('Backend sync failed (non-blocking):', backendErr);
+        }
+        navigate('/');
+      }
+      // If null, redirect is happening — page will reload
     } catch (err) {
+      console.error('Google sign-in error:', err.code, err.message, err);
       setError(err.code ? getErrorMessage(err.code) : err.message);
     } finally {
       setLoading(false);
