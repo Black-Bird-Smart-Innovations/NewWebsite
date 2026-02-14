@@ -43,7 +43,7 @@
 .auth-logo {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: 0;
     font-family: var(--font-display);
     font-weight: 800;
     font-size: var(--text-xl);
@@ -60,9 +60,11 @@
 }
 
 .auth-logo .logo-icon {
-    width: 40px;
+    width: 32px;
     height: 40px;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: left center;
+    margin-right: 0;
 }
 
 .branding-content {

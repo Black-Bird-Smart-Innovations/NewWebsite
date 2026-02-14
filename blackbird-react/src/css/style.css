@@ -2815,7 +2815,7 @@ button {
 }
 
 .footer-logo .logo-icon {
-    width: 36px;
+    width: 28px;
     height: 36px;
     object-fit: cover;
     object-position: left center;
@@ -3363,7 +3363,8 @@ button {
    ============================================ */
 
 /* --- Variable Overrides --- */
-:root[data-theme="dark"] {
+:root[data-theme="dark"],
+:root.dark {
     --color-bg-primary: #0f0f0f;
     --color-bg-secondary: #1a1a1a;
     --color-bg-tertiary: #242424;
@@ -3388,53 +3389,50 @@ button {
 }
 
 /* --- Navigation --- */
-[data-theme="dark"] .nav {
+[data-theme="dark"] .nav, .dark .nav {
     background: rgba(15, 15, 15, 0.8);
 }
 
-[data-theme="dark"] .nav.scrolled {
+[data-theme="dark"] .nav.scrolled, .dark .nav.scrolled {
     background: rgba(15, 15, 15, 0.95);
 }
 
 /* --- Mobile Menu --- */
-[data-theme="dark"] .mobile-menu {
+[data-theme="dark"] .mobile-menu, .dark .mobile-menu {
     background: rgba(15, 15, 15, 0.98);
 }
 
 /* --- Hero --- */
-[data-theme="dark"] .hero {
+[data-theme="dark"] .hero, .dark .hero {
     background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
 }
 
 /* --- Nav Logo: crop out baked-in dark text, keep only the red bird --- */
-[data-theme="dark"] .nav-logo .logo-icon {
-    width: 50px;
+[data-theme="dark"] .nav-logo .logo-icon, .dark .nav-logo .logo-icon {
+    width: 38px;
     height: 50px;
     object-fit: cover;
     object-position: left center;
     margin-right: 0;
 }
 
-[data-theme="dark"] .nav-logo span {
-    display: none;
-}
 
 /* --- Product Image Wrapper --- */
-[data-theme="dark"] .product-image-wrapper {
+[data-theme="dark"] .product-image-wrapper, .dark .product-image-wrapper {
     background: linear-gradient(135deg, #1a1a1a 0%, #242424 100%);
 }
 
 /* --- Product Feature Tags --- */
-[data-theme="dark"] .product-feature {
+[data-theme="dark"] .product-feature, .dark .product-feature {
     background: rgba(220, 53, 69, 0.15);
 }
 
 /* --- App Store Buttons --- */
-[data-theme="dark"] .app-store-btn {
+[data-theme="dark"] .app-store-btn, .dark .app-store-btn {
     background: #1a1a1a;
 }
 
-[data-theme="dark"] .app-store-btn:hover {
+[data-theme="dark"] .app-store-btn:hover, .dark .app-store-btn:hover {
     background: #242424;
 }
 
@@ -3464,11 +3462,12 @@ button {
     height: 20px;
 }
 
-/* Show moon in light mode, sun in dark mode */
-[data-theme="light"] .icon-sun { display: none; }
-[data-theme="light"] .icon-moon { display: block; }
-[data-theme="dark"] .icon-sun { display: block; }
-[data-theme="dark"] .icon-moon { display: none; }
+/* Default (light): show moon icon, hide sun */
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+/* Dark: show sun icon, hide moon */
+[data-theme="dark"] .theme-toggle .icon-sun, .dark .theme-toggle .icon-sun { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon, .dark .theme-toggle .icon-moon { display: none; }
 
 /* Scroll fade-in animations */
 .fade-in-element {
