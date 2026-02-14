@@ -14,12 +14,7 @@ export default function PricingSection() {
           <div className="pricing-badge">Most Popular</div>
           <div className="pricing-header">
             <h3 className="pricing-name">Premium Protection</h3>
-            <div className="pricing-amount">
-              <span className="currency">$</span>
-              <span className="price">39</span>
-              <span className="cents">.99</span>
-              <span className="period">/month</span>
-            </div>
+            <p className="pricing-quote">Contact us for a quote</p>
             <p className="pricing-subtitle">Everything you need for complete peace of mind</p>
           </div>
 
@@ -82,8 +77,8 @@ export default function PricingSection() {
             </div>
           </div>
 
-          <a href="#pricing" className="btn btn-primary btn-large pricing-cta">
-            <span>Start Your Protection</span>
+          <a href="#contact" className="btn btn-primary btn-large pricing-cta">
+            <span>Get a Quote</span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -94,7 +89,7 @@ export default function PricingSection() {
               <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" strokeWidth="1.5" />
               <path d="M8 5V8M8 11H8.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
             </svg>
-            Month-to-month billing. No contracts. Cancel anytime.
+            Flexible plans available. No long-term contracts required.
           </p>
         </div>
       </div>

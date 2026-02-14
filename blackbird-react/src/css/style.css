@@ -2631,6 +2631,15 @@ button {
     margin-bottom: var(--space-sm);
 }
 
+.pricing-quote {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-sm);
+    text-align: center;
+}
+
 .currency {
     font-size: var(--text-2xl);
     font-weight: 600;
@@ -3078,6 +3087,12 @@ button {
 
     .pricing-card {
         padding: var(--space-xl);
+    }
+
+    .pricing-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: var(--space-md);
     }
 
     .footer-links-group {
