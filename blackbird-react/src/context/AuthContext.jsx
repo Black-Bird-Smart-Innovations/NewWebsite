@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { auth } from '../firebase';
+import { auth, checkRedirectResult } from '../firebase';
 
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://web.blackbirdtech.app';
 const API_KEY = 'BlackBird@123*';
@@ -57,6 +57,15 @@ export function AuthProvider({ children }) {
       setBackendLoading(false);
     }
   }, []);
+
+  // Handle redirect result on page load (for OAuth redirect fallback)
+  useEffect(() => {
+    checkRedirectResult().then((result) => {
+      if (result?.user) {
+        syncBackend(result.user);
+      }
+    });
+  }, [syncBackend]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
