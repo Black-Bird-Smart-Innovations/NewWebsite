@@ -2994,6 +2994,8 @@ button {
 
     .nav-actions {
         gap: var(--space-sm);
+        margin-left: auto;
+        margin-right: var(--space-sm);
     }
 
     .nav-toggle {
